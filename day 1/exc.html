@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>number count</title>
+</head>
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: blanchedalmond;
+    }
+    section { width: 320px; height: 400px; margin: 130px auto;  padding: 1em 2em; text-align: center;}
+
+    h1 {
+      font-size: 12em;
+    }
+
+    button { width: 100px; height: 80px; border-radius: 100%; outline: none; margin: 0px 10px;}
+  </style>
+
+  <section>
+    <h1 id="counter">0</h1>
+    <br>
+    <br>
+    <div class="navigators">
+      <span><button id="previous" onclick="lessOne()">Less count</button></span> <span><button id="next" onclick="addOne()">Add count</button></span>
+    </div>
+  </section>
+
+  <script>
+
+    let count = 0;
+
+    function addOne() {
+      var counter = document.getElementById('counter');
+      count++;
+      counter.textContent = count;
+
+      if (count > 0) {
+      counter.style.color = 'green';
+      }else {
+        counter.style.color = 'black';
+      }
+    };
+
+    function lessOne() {
+      var counter = document.getElementById('counter');
+      count--;
+      counter.textContent = count;
+      if (count < 0) {
+        counter.style.color = "red";
+      }else {
+        counter.style.color = 'black';
+      }
+    };
+  </script>
+  
+</body>
+</html>
